@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud Operation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="heading">
+        Welcome here
+    </div>
+    <hr>
+    <div id="main-form">
+        <form onsubmit="formsubmit()">
+            <div>
+                <label for="Fullname">Name </label>
+                <input type="text" id="Fullname" name="Fullname">
+            </div>
+
+            <div>
+                <label for="email">Email </label>
+                <input type="email" id="email" name="email">
+            </div>
+
+            <div>
+                <label for="Salary">Salary </label>
+                <input type="number" id="Salary" name="Salary">
+            </div>
+
+            <div>
+                <label for="age">Age </label>
+                <input type="number" id="age" name="age">
+            </div>
+
+            <div class="Submit-btn">
+                <input type="button" value="Submit" onclick="formsubmit()">
+            </div>
+        </form>
+    </div>
+    <div class="main_table">
+        <table id="list" class="table-list">
+            <thead>
+                <tr>
+                    <th>Sr no.</th>
+                    <th>Full Name</th>
+                    <th>Email</th>
+                    <th>Salary</th>
+                    <th>Age</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
