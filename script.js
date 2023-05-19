@@ -1,20 +1,30 @@
-
-
 function formsubmit() {
     if (validate()) {
-        alert("form is submitted")
+        document.getElementById("error_validation-1nd").style.display = "none";
+        document.getElementById("error_validation-2nd").style.display = "none";
+
         const dt = readdata();
         insertdata(dt);
-    }
-    else {
-        alert("plz enter something")
+        reset();
     }
 }
 
+
 function validate() {
     let valid = true
-    if (document.getElementById("Fullname").value == "" || document.getElementById("Salary").value == "") {
+    if (document.getElementById("Fullname").value == "") {
         valid = false;
+        document.getElementById("error_validation-1nd").style.display = "inline"
+    }
+    else {
+        document.getElementById("error_validation-1nd").style.display = "none"
+    }
+    if (document.getElementById("Salary").value == "") {
+        valid = false;
+        document.getElementById("error_validation-2nd").style.display = "inline"
+    }
+    else {
+        document.getElementById("error_validation-2nd").style.display = "none"
     }
     return valid
 }
@@ -48,3 +58,19 @@ function readdata() {
 
     return data;
 }
+
+function reset() {
+    document.getElementById("Fullname").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("Salary").value = "";
+    document.getElementById("age").value = "";
+}
+
+function removeerror() {
+    document.getElementById("error_validation-1nd").style.display = "none"
+    document.getElementById("error_validation-2nd").style.display = "none"
+}
+
+
+
+

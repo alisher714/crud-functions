@@ -16,6 +16,12 @@
     font-size: 20px;
 }
 
+.error {
+    font-size: 80%;
+    color: red;
+    display: none;
+}
+
 input[type=text],
 input[type=number],
 input[type=email] {
@@ -42,8 +48,10 @@ input[type=button] {
     cursor: pointer;
 }
 
-.Submit-btn {
-    text-align: right;
+.Submit-btn,
+.reset-btn {
+    display: inline;
+    margin-left: 90px;
 }
 
 .main_table {

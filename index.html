@@ -17,7 +17,8 @@
     <div id="main-form">
         <form onsubmit="formsubmit()">
             <div>
-                <label for="Fullname">Name </label>
+                <label for="Fullname">Name </label><span id="error_validation-1nd" class="error">* This Field is
+                    Compulsury</span>
                 <input type="text" id="Fullname" name="Fullname">
             </div>
 
@@ -27,7 +28,8 @@
             </div>
 
             <div>
-                <label for="Salary">Salary </label>
+                <label for="Salary">Salary </label><span id="error_validation-2nd" class="error">* This Field is
+                    Compulsury</span>
                 <input type="number" id="Salary" name="Salary">
             </div>
 
@@ -36,12 +38,15 @@
                 <input type="number" id="age" name="age">
             </div>
 
+            <div class="reset-btn">
+                <input type="button" value="Reset" onclick="reset(), removeerror() ">
+            </div>
             <div class="Submit-btn">
                 <input type="button" value="Submit" onclick="formsubmit()">
             </div>
         </form>
     </div>
-    <div class="main_table">
+    <div class=" main_table">
         <table id="list" class="table-list">
             <thead>
                 <tr>
@@ -54,6 +59,22 @@
                 </tr>
             </thead>
             <tbody>
+                <!-- <tr>
+                    <td>Sr no.</td>
+                    <td>Full Name</td>
+                    <td>Email</td>
+                    <td>Salary</td>
+                    <td>Age</td>
+                    <td>Action</td>
+                </tr>
+                <tr>
+                    <td>Sr no.</td>
+                    <td>Full Name</td>
+                    <td>Email</td>
+                    <td>Salary</td>
+                    <td>Age</td>
+                    <td>Action</td>
+                </tr> -->
 
             </tbody>
         </table>
